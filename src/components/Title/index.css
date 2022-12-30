@@ -1,0 +1,22 @@
+
+.title_text_wrapper{
+    text-align: center;
+
+}
+
+.title_text_wrapper h1{
+    color: #252525;
+    font-size: 2.5rem;
+    width: 50%;
+    margin: auto;
+    padding:  30px;
+    padding-top: 15px;
+    font-weight: 790;
+
+}
+.title_text_wrapper span{
+    color: #f43127;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
