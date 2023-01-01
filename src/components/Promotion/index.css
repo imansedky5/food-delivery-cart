@@ -1,47 +1,43 @@
-.promotion_wrapper{
-    background-image: url("C:\Users\M.S.I\food-delivery\public\images\INNER_header_02.jpg");
-    position: relative;
-    padding: 100px;
-    color: #fff;
-    text-align: center;
-
+.promotion_wrapper {
+  background-image: url("C:\Users\M.S.I\food-delivery\public\images\INNER_header_02.jpg");
+  position: relative;
+  padding: 100px;
+  color: #fff;
+  text-align: center;
 }
-.promotion_wrapper h2, .promotion_wrapper p{
- 
-    width: 80%;
-    margin: auto;
-
+.promotion_wrapper h2,
+.promotion_wrapper p {
+  width: 80%;
+  margin: auto;
 }
-.promotion_wrapper h2{
-    font-size: 4rem;
+.promotion_wrapper h2 {
+  font-size: 4rem;
 }
-.promotion_wrapper p{
-    font-size: 1.5rem;
-    margin: 30px auto;
+.promotion_wrapper p {
+  font-size: 1.5rem;
+  margin: 30px auto;
 }
-.promotion_wrapper:after{
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
-
+.promotion_wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
 }
 .promotion_wrapper > * {
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 100;
 }
-.offer{
-    color: #fcb302;
-
+.offer {
+  color: #fcb302;
 }
-.promotion_wrapper button{
-    width: 200px;
-    background-color: #fcb302;
-    /* background-color: #f43127; */
-    color: #fff;
-    font-size: 1rem;
+.promotion_wrapper button {
+  width: 200px;
+  background-color: #fcb302;
+  /* background-color: #f43127; */
+  color: #fff;
+  font-size: 1rem;
 }
