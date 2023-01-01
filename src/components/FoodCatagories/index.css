@@ -1,0 +1,14 @@
+.catagories_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .catagories_wrapper button {
+    margin: 15px;
+    width: 130px;
+  }
+  .catagories_wrapper button:hover {
+    background-color: #fcb302;
+    color: #fff;
+  }
+  
