@@ -1,16 +1,9 @@
-// import useLocalStorage from "../hooks/UseLocalStorage";
 import { Order, State } from "../assests/types";
 
 type addAction = { type: string; payload: Order };
 type updateAction = { type: string; payload: number };
 
 type cartAction = addAction | updateAction;
-
-// type cartAction =
-//   | { type: "ADD_TO_CART"; payload: Order }
-//   | { type: "REMOVE_FROM_CART"; payload: number }
-//   | { type: "INCREASE_QUANTITY"; payload: number }
-//   | { type: "DECREASE_QUANTITY"; payload: number };
 
 const actions = {
   ADD_TO_CART: "ADD_TO_CART",
@@ -19,17 +12,10 @@ const actions = {
   DECREASE_QUANTITY: "DECREASE_QUANTITY",
 };
 
-//usememe rerendering and strict mode local storage slider
-// const initialState = {
-//     cart: [],
-//     total: 0,
-//   };
-
 const addToCart = (state: State, order: Order) => {
-  let isOrderExist = state.cart?.find((el: Order) => el.id === order.id);
+  let isOrderExist = state.cart.find((el) => el.id === order.id);
 
   if (isOrderExist) {
-    //increase order quantity & return the cart as it is
     order.quantity! += 1;
     return [...state.cart];
   } else {
@@ -38,24 +24,23 @@ const addToCart = (state: State, order: Order) => {
   }
 };
 
-const removeFromCart = (orderId: number, state: State) => {
-  let filteredOrders = state.cart?.filter(
-    (order: Order) => order.id !== orderId
-  );
+const removeFromCart = (state: State, orderId: number) => {
+  let filteredOrders = state.cart.filter((order) => order.id !== orderId);
 
   return filteredOrders;
 };
 
-const increaseOrderQuantity = (orderId: number, state: State) => {
-  return state.cart?.map((order: Order) => {
+const increaseOrderQuantity = (state: State, orderId: number) => {
+  return state.cart.map((order) => {
     if (order.id == orderId) {
       order.quantity! += 1;
     }
+    console.log(order, "after addition ");
     return order;
   });
 };
-const decreaseQuantity = (orderId: number, state: State) => {
-  return state.cart?.map((order: Order) => {
+const decreaseQuantity = (state: State, orderId: number) => {
+  return state.cart.map((order) => {
     if (order.id == orderId && order.quantity !== 0) {
       order.quantity! -= 1;
     }
@@ -63,22 +48,23 @@ const decreaseQuantity = (orderId: number, state: State) => {
   });
 };
 
-export const cartReducer = (state: State, action: cartAction): State => {
+export const cartReducer = (state: State, action: cartAction) => {
   const { type, payload } = action;
 
   switch (type) {
     case actions.ADD_TO_CART:
+      console.log(action.type);
       addToCart(state, payload as Order);
       return { ...state, cart: addToCart(state, payload as Order) };
 
     case actions.REMOVE_FROM_CART:
-      return { ...state, cart: removeFromCart(payload as number, state) };
+      return { ...state, cart: removeFromCart(state, payload as number) };
 
     case actions.INCREASE_QUANTITY:
-      return { cart: increaseOrderQuantity(payload as number, state) };
+      return { cart: increaseOrderQuantity(state, payload as number) };
 
     case actions.DECREASE_QUANTITY:
-      return { cart: decreaseQuantity(payload as number, state) };
+      return { cart: decreaseQuantity(state, payload as number) };
 
     default:
       return state;

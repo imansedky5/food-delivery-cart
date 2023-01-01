@@ -1,22 +1,14 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import { cartReducer } from "./cartReducer";
-// import {Props, State} from '../assests/types'
-import {Order, State, ContextInterface, Props} from '../assests/types'
+import { Order, State, ContextInterface } from "../assests/types";
 
-
-// import useLocalStorage from "../hooks/UseLocalStorage";
-
-// type addAction = { type: string; payload: Order };
-// type updateAction = { type: string; payload: number };
-
-// type cartAction = addAction | updateAction;
-
+type CartProviderProps = {
+  children?: React.ReactNode;
+};
 
 const CartContext = createContext<ContextInterface | null>(null);
 
-const CartProvider = ({ children }: Props) => {
-  // const  [cart, setCart] = useLocalStorage("cart", []);
-
+const CartProvider = ({ children }: CartProviderProps) => {
   const initialState: State = {
     cart:
       localStorage.getItem("cart") == null
@@ -27,7 +19,6 @@ const CartProvider = ({ children }: Props) => {
 
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  // setCart(state.cart)
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
