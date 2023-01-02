@@ -17,7 +17,7 @@ export const CartPopup = () => {
             return (
               <>
                 <div className="popup_row">
-                  <img className="popup_row_img" src={url}></img>
+                  <img className="popup_row_img" src={url} alt="food"></img>
                   <div className="popup_row_title_wrapper">
                     <p className="popup_row_title">{title}</p>
                     <p className="popup_row_price">{price}</p>

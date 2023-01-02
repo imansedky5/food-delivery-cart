@@ -5,10 +5,11 @@
   margin: auto;
   position: absolute;
   top: 70px;
-  right: 260px;
+  right: 300px;
   background-color: #fff;
   color: black;
-  border-top: solid 5px #fc9c1a;
+  border-top: solid 4px #fc9c1a;
+  z-index: 1000;
 }
 
 .popup_row {

@@ -6,15 +6,16 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { ContextInterface } from "../../assests/types";
 import { Order } from "../../assests/types";
+import { CartPopup } from "../CartPopup";
 
 export const Navbar = () => {
   const { cartState } = useContext(CartContext) || ({} as ContextInterface);
+  const [isClicked, setIsClicked] = useState(false);
 
-  let numberOfOrders = cartState.reduce((acc, order: Order) => {
-    return order["quantity"]! + acc;
+  let numberOfOrders = cartState.reduce((totalOrders, order: Order) => {
+    return order["quantity"]! + totalOrders;
   }, 0);
 
-  const [isHovering, setIsHovering] = useState(false);
   return (
     <>
       <nav>
@@ -38,18 +39,16 @@ export const Navbar = () => {
             </p>
             <span
               className="cart_icon"
-              onMouseOver={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
+              onClick={() => setIsClicked(!isClicked)}
             >
-              {/* <CiShoppingCart className="cart_icon"></CiShoppingCart> */}
               <CiShoppingCart></CiShoppingCart>
               <div className="cart_quantity">{numberOfOrders}</div>
             </span>
+            <div>{isClicked && <CartPopup></CartPopup>}</div>
             <button className="order_now_btn">order online</button>
           </div>
         </div>
       </nav>
-      {/* {isHovering && <CartPopup></CartPopup>} */}
     </>
   );
 };
