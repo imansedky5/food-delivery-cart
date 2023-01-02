@@ -1,4 +1,5 @@
 import { Order, State } from "../assests/types";
+import { Quantity } from "../components/Quantity";
 
 type addAction = { type: string; payload: Order };
 type updateAction = { type: string; payload: number };
@@ -33,18 +34,20 @@ const removeFromCart = (state: State, orderId: number) => {
 const increaseOrderQuantity = (state: State, orderId: number) => {
   return state.cart.map((order) => {
     if (order.id == orderId) {
-      order.quantity! += 1;
+      return { ...order, quantity: order.quantity! + 1 };
+    } else {
+      return order;
     }
-    console.log(order, "after addition ");
-    return order;
   });
 };
+
 const decreaseQuantity = (state: State, orderId: number) => {
   return state.cart.map((order) => {
     if (order.id == orderId && order.quantity !== 0) {
-      order.quantity! -= 1;
+      return { ...order, quantity: order.quantity! - 1 };
+    } else {
+      return order;
     }
-    return order;
   });
 };
 
