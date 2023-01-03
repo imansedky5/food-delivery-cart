@@ -5,13 +5,15 @@ import { CartContext } from "../../context/CartContext";
 import { Props, ContextInterface } from "../../assests/types";
 
 export const AddToCartBtn = ({ order }: Props) => {
-  const { addToCart } = useContext(CartContext) || ({} as ContextInterface);
+  const { addToCart, updateTotalPrice } =
+    useContext(CartContext) || ({} as ContextInterface);
 
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
     addToCart(order);
     setIsClicked(true);
+    updateTotalPrice();
   };
 
   return (

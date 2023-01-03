@@ -2,7 +2,7 @@ import { Order, State } from "../assests/types";
 import { Quantity } from "../components/Quantity";
 
 type addAction = { type: string; payload: Order };
-type updateAction = { type: string; payload: number };
+type updateAction = { type: string; payload?: number };
 
 type cartAction = addAction | updateAction;
 
@@ -11,6 +11,7 @@ const actions = {
   REMOVE_FROM_CART: "REMOVE_FROM_CART",
   INCREASE_QUANTITY: "INCREASE_QUANTITY",
   DECREASE_QUANTITY: "DECREASE_QUANTITY",
+  UPDATE_TOTAL_PRICE: "UPDATE_TOTAL_PRICE",
 };
 
 const addToCart = (state: State, order: Order) => {
@@ -23,6 +24,14 @@ const addToCart = (state: State, order: Order) => {
     order.quantity = 1;
     return [...state.cart, order];
   }
+};
+
+const updateTotalPrice = (cart: Order[]) => {
+  const cartTotal = cart.reduce((total: number, item: Order) => {
+    return total + item.quantity! * item.price!;
+  }, 0);
+
+  return cartTotal;
 };
 
 const removeFromCart = (state: State, orderId: number) => {
@@ -56,18 +65,22 @@ export const cartReducer = (state: State, action: cartAction) => {
 
   switch (type) {
     case actions.ADD_TO_CART:
-      console.log(action.type);
-      addToCart(state, payload as Order);
       return { ...state, cart: addToCart(state, payload as Order) };
 
     case actions.REMOVE_FROM_CART:
       return { ...state, cart: removeFromCart(state, payload as number) };
 
     case actions.INCREASE_QUANTITY:
-      return { cart: increaseOrderQuantity(state, payload as number) };
+      return {
+        ...state,
+        cart: increaseOrderQuantity(state, payload as number),
+      };
 
     case actions.DECREASE_QUANTITY:
-      return { cart: decreaseQuantity(state, payload as number) };
+      return { ...state, cart: decreaseQuantity(state, payload as number) };
+
+    case actions.UPDATE_TOTAL_PRICE:
+      return { ...state, total: updateTotalPrice(state.cart) };
 
     default:
       return state;

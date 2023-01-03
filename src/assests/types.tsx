@@ -2,7 +2,7 @@ interface Order {
   id?: number;
   title?: string;
   url?: string;
-  price?: string;
+  price?: number;
   quantity?: number;
   type?: string;
   description?: string;
@@ -14,7 +14,7 @@ type Props = {
 
 interface State {
   cart: Order[];
-  total?: number;
+  total: number;
 }
 
 interface ContextInterface {
@@ -22,7 +22,9 @@ interface ContextInterface {
   removeFromCart: (orderId: number) => void;
   increaseQuantity: (orderId: number) => void;
   decreaseQuantity: (orderId: number) => void;
+  updateTotalPrice: () => void;
   cartState: Order[];
+  total: number;
 }
 
 export type { Order, State, ContextInterface, Props };

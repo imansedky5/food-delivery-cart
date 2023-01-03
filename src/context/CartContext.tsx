@@ -37,6 +37,9 @@ const CartProvider = ({ children }: CartProviderProps) => {
   const decreaseQuantity = (orderId: number) => {
     return dispatch({ type: "DECREASE_QUANTITY", payload: orderId });
   };
+  const updateTotalPrice = () => {
+    return dispatch({ type: "UPDATE_TOTAL_PRICE" });
+  };
 
   return (
     <CartContext.Provider
@@ -44,8 +47,10 @@ const CartProvider = ({ children }: CartProviderProps) => {
         addToCart,
         removeFromCart,
         cartState: state.cart,
+        total: state.total,
         increaseQuantity,
         decreaseQuantity,
+        updateTotalPrice
       }}
     >
       {children}
