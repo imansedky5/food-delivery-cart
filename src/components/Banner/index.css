@@ -1,0 +1,43 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: url("C:\Users\M.S.I\food-delivery\public\images\INNER_header_02.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  padding-top: 50px;
+  height: 280px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: black;
+}
+
+.banner > * {
+  position: relative;
+  z-index: 10;
+}
+.banner_arrow {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.path {
+  display: flex;
+  align-items: center;
+}
+.banner_home_link {
+  color: #fc9c1a;
+}

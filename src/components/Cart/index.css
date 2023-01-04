@@ -1,0 +1,54 @@
+table {
+  margin: auto;
+  border-collapse: collapse;
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+  color: #555555;
+}
+
+td {
+  border-bottom: 1px solid grey;
+}
+
+th {
+  background-color: #f5f5f5;
+  color: #555555;
+}
+th {
+  padding: 25px 30px;
+}
+
+td {
+  padding: 7px 30px;
+}
+th:first-child {
+  border-radius: 50px 0 0 50px;
+}
+th:last-child {
+  border-radius: 0 50px 50px 0;
+}
+.subtotal_delete_wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 19px;
+  font-weight: 500;
+  font-weight: 500;
+}
+
+.img_title_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img_title_wrapper .title {
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+table img {
+  width: 100px;
+}
+.delete {
+  color: #f43127;
+}

@@ -8,11 +8,17 @@ nav {
   display: flex;
   justify-content: space-around;
   text-transform: uppercase;
-  color: white;
+  color: #ffffffe3;
   position: fixed;
   width: 100%;
   top: 0px;
   z-index: 200;
+}
+
+.transparent_nav {
+  position: absolute;
+  background-color: transparent;
+  border-bottom: solid 1px rgb(182 182 182 / 19%);
 }
 
 nav ul {
@@ -29,22 +35,6 @@ nav ul li {
 }
 nav ul li:hover {
   color: #fcb305;
-}
-.order_now_btn {
-  color: #f43127;
-  background-color: #fff;
-  border: none;
-  font-weight: 700;
-  font-size: 13px;
-
-  width: 160px;
-  padding: 13px 20px;
-  text-transform: uppercase;
-  border-radius: 17px;
-  transition: 0.4s ease-out;
-}
-.order_now_btn:hover {
-  background-color: #f2f0f1;
 }
 
 .cart_icon {
@@ -73,18 +63,21 @@ nav ul li:hover {
   /* position: relative; */
 }
 .menu_wrapper {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .hotline {
   font-weight: 700;
-  color: white;
+  /* color: white; */
+  color: #ffffffe3;
+  padding-left: 40px;
 }
 .hotline span {
   color: #fcb305;
 }
 .link {
-  color: white;
+  /* color: white; */
+  color: #ffffffe3;
 }

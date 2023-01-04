@@ -8,7 +8,11 @@ import { ContextInterface } from "../../assests/types";
 import { Order } from "../../assests/types";
 import { CartPopup } from "../CartPopup";
 
-export const Navbar = () => {
+interface navbarProps {
+  className?: string;
+}
+
+export const Navbar = ({ className }: navbarProps) => {
   const { cartState } = useContext(CartContext) || ({} as ContextInterface);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -18,7 +22,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav className={className}>
         <img alt="logo" src="./images/logo.png" />
         <div className="menu_wrapper">
           <ul>
@@ -45,7 +49,6 @@ export const Navbar = () => {
               <div className="cart_quantity">{numberOfOrders}</div>
             </span>
             <div>{isClicked && <CartPopup></CartPopup>}</div>
-            <button className="order_now_btn">order online</button>
           </div>
         </div>
       </nav>
