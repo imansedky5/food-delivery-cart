@@ -60,7 +60,6 @@ nav ul li:hover {
   justify-content: space-between;
   align-items: center;
   width: 56%;
-  /* position: relative; */
 }
 .menu_wrapper {
   width: 50%;
@@ -70,7 +69,6 @@ nav ul li:hover {
 }
 .hotline {
   font-weight: 700;
-  /* color: white; */
   color: #ffffffe3;
   padding-left: 40px;
 }
@@ -78,6 +76,5 @@ nav ul li:hover {
   color: #fcb305;
 }
 .link {
-  /* color: white; */
   color: #ffffffe3;
 }
