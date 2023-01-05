@@ -1,0 +1,30 @@
+.slider_section {
+  padding: 120px;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev_next_wrapper {
+  margin-top: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.slider_next_arrow,
+.slider_prev_arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 1.8rem;
+  color: #fc9c1a;
+  font-weight: bold;
+}
