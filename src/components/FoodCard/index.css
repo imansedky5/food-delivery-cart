@@ -1,0 +1,30 @@
+.dish_card {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  color: black;
+}
+.hide_card {
+  display: none;
+}
+
+.card_image {
+  width: 43%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.card_image:hover {
+  transform: scale(1.5);
+}
+.price {
+  color: #59882b;
+  font-size: 20px;
+}
+.old_price {
+  color: grey;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+.card_rating_stars {
+  color: #fcac09;
+}
