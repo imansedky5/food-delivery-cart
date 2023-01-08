@@ -1,0 +1,20 @@
+.total_section {
+  background-color: rgb(246, 246, 246);
+  margin: 40px 120px 40px auto;
+  width: 23%;
+  border-radius: 15px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.total_section div {
+  display: flex;
+  justify-content: space-around;
+}
+.total_section button {
+  display: block;
+  margin: auto;
+  color: white;
+  background-color: #f43127;
+  margin-top: 20px;
+}

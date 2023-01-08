@@ -1,19 +1,28 @@
 import "./index.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Props, ContextInterface } from "../../assests/types";
 
 export const AddToCartBtn = ({ order }: Props) => {
-  const { addToCart, updateTotalPrice } =
+  const { cartState, addToCart, updateTotalPrice } =
     useContext(CartContext) || ({} as ContextInterface);
 
   const [isClicked, setIsClicked] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    addToCart(order);
-    setIsClicked(true);
-    updateTotalPrice();
+    let isOrderAddedToCart = cartState.find((item) => order.id === item.id);
+
+    if (isOrderAddedToCart) {
+      navigate("/cart");
+    } else {
+      addToCart(order);
+      setIsClicked(true);
+      updateTotalPrice();
+    }
   };
 
   return (
@@ -21,7 +30,7 @@ export const AddToCartBtn = ({ order }: Props) => {
       <span className="card_cart_icon">
         <AiOutlineShoppingCart></AiOutlineShoppingCart>
       </span>
-      {isClicked ? "View cart" : "Add to cart"}
+      {!isClicked ? "Add to cart" : "View cart"}
     </button>
   );
 };
