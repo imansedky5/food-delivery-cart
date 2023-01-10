@@ -1,0 +1,115 @@
+footer {
+  text-align: left;
+  background-color: rgb(255, 245, 245);
+  font-size: 1.1rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: solid #faeacd 1px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: flex-start;
+  padding-left: 5px;
+}
+
+footer li {
+  padding-bottom: 20px;
+}
+
+footer h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-agency-name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.footer-agency-section {
+  width: 22.5%;
+  font-size: 1.2rem;
+}
+
+.communication-links > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.communication-icon {
+  padding-right: 20px;
+}
+.footer-tail {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  width: 40%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links div {
+  font-size: 1.3rem;
+  color: #f43127;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-top {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-top > div {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  .social-links {
+    margin: auto;
+  }
+
+  footer ul {
+    align-items: center;
+  }
+  .communication-links > div {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+
+  .footer-top > div {
+    width: 43%;
+  }
+  .social-links {
+    width: 42%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .social-links {
+    width: 53%;
+  }
+  footer h4 {
+    font-size: 1.3rem;
+  }
+}

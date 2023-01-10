@@ -41,3 +41,21 @@
   color: #fff;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .promotion_wrapper {
+    padding: 2em;
+  }
+  .promotion_wrapper h2,
+  .promotion_wrapper p {
+    width: 90%;
+    margin: auto;
+  }
+  .promotion_wrapper h2 {
+    font-size: 3rem;
+    padding-bottom: 0.5em;
+  }
+  .promotion_wrapper p {
+    padding-bottom: 1em;
+  }
+}

@@ -1,26 +1,35 @@
 import "./index.css";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { Quantity } from "../Quantity";
 import { Order, ContextInterface } from "../../assests/types";
+import { TotalSection } from "../TotalSection";
 
 export const Cart = () => {
   const { removeFromCart, updateTotalPrice, cartState } =
     useContext(CartContext) || ({} as ContextInterface);
 
-  return (
-    <table>
-      <tr className="table_header">
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Subtotal</th>
-      </tr>
+  return cartState.length === 0 ? (
+    <div className="empty_cart">
+      <p>
+        your cart is currently <span>Empty!</span>
+      </p>
+      <Link to="/" className="back_to_home_btn">
+        back to home
+      </Link>
+    </div>
+  ) : (
+    <>
+      <table>
+        <tr className="table_header">
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
 
-      {cartState.length === 0 ? (
-        <div>your cart is empty hhhhhhh</div>
-      ) : (
-        cartState.map(({ id, title, price, url, quantity }: Order) => {
+        {cartState.map(({ id, title, price, url, quantity }: Order) => {
           return (
             <tr>
               <td>
@@ -49,8 +58,9 @@ export const Cart = () => {
               </td>
             </tr>
           );
-        })
-      )}
-    </table>
+        })}
+      </table>
+      <TotalSection></TotalSection>
+    </>
   );
 };

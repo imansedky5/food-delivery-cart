@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   box-sizing: border-box;
+  background-color: #fbcdcb;
 }
 
 @media (prefers-reduced-motion: no-preference) {

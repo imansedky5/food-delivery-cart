@@ -28,3 +28,9 @@
 .card_rating_stars {
   color: #fcac09;
 }
+
+@media screen and (max-width: 480px) {
+  .dish_card {
+    width: 90%;
+  }
+}

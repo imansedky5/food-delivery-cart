@@ -1,7 +1,9 @@
 import "./index.css";
 import { Navbar } from "../Navbar";
+import { UseIsMobile } from "../../hooks/useIsMobile";
 
 export const About = () => {
+  const isMobile = UseIsMobile();
   return (
     <>
       <Navbar></Navbar>
@@ -22,23 +24,14 @@ export const About = () => {
             scrambled it to make a type specimen book.
           </p>
         </div>
-        <div className="about_section_images">
-          <img src="./images/image.jpg"></img>
-          <img src="./images/image.jpg"></img>
-          <img src="./images/rest_01.jpg"></img>
-        </div>
+        {!isMobile && (
+          <div className="about_section_images">
+            <img src="./images/image.jpg"></img>
+            <img src="./images/image.jpg"></img>
+            <img src="./images/rest_01.jpg"></img>
+          </div>
+        )}
       </div>
     </>
   );
 };
-
-// .title_text_wrapper h1{
-//     color: #252525;
-//     font-size: 2.5rem;
-//     /* width: 50%;
-//     margin: auto; */
-//     /* padding:  30px; */
-//     /* padding-top: 15px; */
-//     font-weight: 790;
-
-// }

@@ -28,3 +28,9 @@
   color: #fc9c1a;
   font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+  .slider_section {
+    padding: 2rem;
+  }
+}

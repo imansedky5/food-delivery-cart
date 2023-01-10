@@ -54,3 +54,18 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .about_section_info {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about_section_info {
+    width: 100%;
+  }
+  .about_section_images {
+    display: none;
+  }
+}

@@ -17,3 +17,10 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .title_text_wrapper h1 {
+    width: 85%;
+    padding: 0px;
+  }
+}

@@ -1,8 +1,19 @@
-.catagory_section{
-    width: 75%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 100px;
+.catagory_section {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  .catagory_section {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .catagory_section {
+    width: 80%;
+  }
 }
