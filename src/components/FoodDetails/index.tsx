@@ -1,4 +1,4 @@
-import './index.css'
+import "./index.css";
 import { Link, useLocation } from "react-router-dom";
 import { AddToCartBtn } from "../../components/AddToCartBtn";
 import { AiTwotoneStar } from "react-icons/ai";
@@ -10,7 +10,7 @@ export const FoodDetails = () => {
   return (
     <div className="food_details_wrapper">
       <div className="food_details_img">
-      <img  src={order.url}></img>
+        <img src={order.url}></img>
       </div>
       <div className="food_details_section">
         <div className="rating_stars_title_wrapper">
@@ -26,10 +26,11 @@ export const FoodDetails = () => {
 
         <p className="price">${order.price}</p>
         <p className="description">{order.details}</p>
-        {/* //add update card button to the card and update the quentity only on Click */}
         <div className="wrapper">
           <AddToCartBtn order={order}></AddToCartBtn>
-          <Link to="/" className='back_to_home_btn'>back to home</Link>
+          <Link to="/" className="back_to_home_btn">
+            back to home
+          </Link>
         </div>
       </div>
     </div>
