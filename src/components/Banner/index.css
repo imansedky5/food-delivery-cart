@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  background-image: url("C:\Users\M.S.I\food-delivery\public\images\INNER_header_02.jpg");
+  background-image: url("/public/images/INNER_header_02.jpg");
   background-position: 50% 0;
   background-size: cover;
   padding-top: 50px;
