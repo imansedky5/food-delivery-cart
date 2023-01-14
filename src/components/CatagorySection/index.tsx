@@ -1,5 +1,5 @@
 import "./index.css";
-import { CatagoryCard } from "../CatagoryCard";
+import { CatagoryCard } from "./CatagoryCard";
 
 export const CatagorySection = () => {
   return (

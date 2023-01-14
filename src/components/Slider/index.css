@@ -29,8 +29,25 @@
   font-weight: bold;
 }
 
+.slider_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .slider_menu {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .slider_section {
     padding: 2rem;
   }
+  .slider_menu {
+    flex-direction: column;
+  }
 }
+
+

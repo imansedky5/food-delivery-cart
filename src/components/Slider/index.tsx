@@ -1,6 +1,6 @@
 import "./index.css";
 import { useState, useEffect } from "react";
-import { SliderMenu } from "../SliderMenu";
+import { SliderMenu } from "./SliderMenu";
 import { fastFoodData } from "../../assests/data";
 import { FoodCatagories } from "../FoodCatagories";
 import { Title } from "../Title";
