@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const MobileMenu = () => {
   return (
-    <menu className="mobile_menu">
+    <div className="mobile_menu">
       <Link to="/" className="category_link">
         HOME
       </Link>
@@ -13,6 +13,6 @@ export const MobileMenu = () => {
       <Link to="/about" className="category_link">
         ABOUT
       </Link>
-    </menu>
+    </div>
   );
 };

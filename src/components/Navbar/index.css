@@ -4,9 +4,10 @@
 
 nav {
   background-color: #f43127;
-  padding: 20px;
+  padding: 20px 0px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   text-transform: uppercase;
   color: #ffffffe3;
   position: fixed;
@@ -77,4 +78,33 @@ nav ul li:hover {
 }
 .link {
   color: #ffffffe3;
+}
+.burger_menu_container {
+  width: 37%;
+  text-align: end;
+  padding-right: 20px;
+  position: relative;
+}
+.mobile_menu {
+  width: 30vw;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: rgb(73 77 81 / 20%) 0px 8px 24px;
+  border-radius: 3px;
+  padding: 10px 0px;
+}
+.category_link {
+  text-decoration: none;
+  color: #555555;
+  margin: auto;
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: 0.4s ease-out;
+  text-align: center;
 }

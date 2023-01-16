@@ -59,12 +59,15 @@ export const Navbar = ({ className }: navbarProps) => {
           </div>
         )}
         {isMobile && (
-          <div onClick={() => setIsMenuClicked(!isMenuClicked)}>
+          <div
+            className="burger_menu_container"
+            onClick={() => setIsMenuClicked(!isMenuClicked)}
+          >
             <GiHamburgerMenu></GiHamburgerMenu>
+            {isMenuClicked && <MobileMenu></MobileMenu>}
           </div>
         )}
       </nav>
-      {isMenuClicked && <MobileMenu></MobileMenu>}
     </>
   );
 };
