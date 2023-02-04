@@ -31,9 +31,11 @@ nav ul {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
+
 nav ul li {
   padding-left: 20px;
 }
+
 nav ul li:hover {
   color: #fcb305;
 }
@@ -44,6 +46,7 @@ nav ul li:hover {
   padding: auto 30px;
   position: relative;
 }
+
 .cart_quantity {
   position: absolute;
   top: -7px;
@@ -56,35 +59,33 @@ nav ul li:hover {
   color: #fcb305;
 }
 
-.icon_btn_wrapper {
+.cart_icon_container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 56%;
+  margin-left: 25px;
+
 }
+
 .menu_wrapper {
-  width: 50%;
+  width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-.hotline {
-  font-weight: 700;
-  color: #ffffffe3;
-  padding-left: 40px;
-}
-.hotline span {
-  color: #fcb305;
-}
+
 .link {
   color: #ffffffe3;
 }
+
 .burger_menu_container {
   width: 37%;
   text-align: end;
   padding-right: 20px;
   position: relative;
 }
+
 .mobile_menu {
   width: 30vw;
   background-color: white;
@@ -95,6 +96,7 @@ nav ul li:hover {
   border-radius: 3px;
   padding: 10px 0px;
 }
+
 .category_link {
   text-decoration: none;
   color: #555555;

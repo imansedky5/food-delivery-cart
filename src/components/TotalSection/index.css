@@ -12,9 +12,23 @@
   justify-content: space-around;
 }
 .total_section button {
+  width: 70%;
   display: block;
   margin: auto;
   color: white;
   background-color: #f43127;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .total_section {
+    margin: 40px auto;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .total_section {
+    width: 33%;
+  }
 }

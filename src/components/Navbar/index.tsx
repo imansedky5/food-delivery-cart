@@ -43,10 +43,7 @@ export const Navbar = ({ className }: navbarProps) => {
                 <li>cart</li>
               </Link>
             </ul>
-            <div className="icon_btn_wrapper">
-              <p className="hotline">
-                <span>Hot line:</span> +970 59721212
-              </p>
+            <div className="cart_icon_container">
               <span
                 className="cart_icon"
                 onClick={() => setIsCartClicked(!isCartClicked)}

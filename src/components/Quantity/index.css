@@ -1,9 +1,25 @@
-.quantity_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid grey;
-    border-radius: 50px;
-    width: 120px;
-    height: 50px;
+.quantity_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 50px;
+  width: 120px;
+  height: 50px;
+}
+@media screen and (max-width: 480px) {
+  .quantity_container {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 30px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .quantity_container {
+    width: 6rem;
+    height: 2rem;
+  }
 }
