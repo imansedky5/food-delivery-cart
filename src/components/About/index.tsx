@@ -25,11 +25,7 @@ export const About = () => {
           </p>
         </div>
         {!isMobile && (
-          <div className="about_section_images">
-            <img src="./images/image.jpg"></img>
-            <img src="./images/image.jpg"></img>
-            <img src="./images/rest_01.jpg"></img>
-          </div>
+          <img src="./images/burger_-3.png"></img>
         )}
       </div>
     </>
