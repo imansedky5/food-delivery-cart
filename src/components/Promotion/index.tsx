@@ -8,8 +8,7 @@ export const Promotion = () => {
       </h2>
       <p>
         If you order food delivery from us for the first time then we have a
-        gift - 50% discount for you on the first order. You just need to
-        register and order your favorite food.
+        gift - 50% discount for you on the first order.
       </p>
       <button>Order Now</button>
     </section>

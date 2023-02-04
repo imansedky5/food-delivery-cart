@@ -10,9 +10,7 @@ export const CartPopup = () => {
 
   return (
     <div>
-      {cartState.length === 0 ? (
-        <p>your cart is empty</p>
-      ) : (
+      {cartState.length !== 0 && (
         <div className="popup">
           {cartState.map(({ title, price, url, quantity }: Order) => {
             return (

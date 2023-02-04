@@ -7,14 +7,14 @@
 }
 .promotion_wrapper h2,
 .promotion_wrapper p {
-  width: 80%;
+  width: 75%;
   margin: auto;
 }
 .promotion_wrapper h2 {
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 .promotion_wrapper p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 30px auto;
 }
 .promotion_wrapper:after {
