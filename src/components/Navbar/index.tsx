@@ -38,7 +38,6 @@ export const Navbar = ({ className }: navbarProps) => {
               <Link className="link" to="/about">
                 <li>about</li>
               </Link>
-              <li>menu</li>
               <Link className="link" to="/cart">
                 <li>cart</li>
               </Link>

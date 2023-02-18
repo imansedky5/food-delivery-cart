@@ -15,7 +15,7 @@ export const Banner = ({ page }: BannerProps) => {
         <span className="banner_arrow">
           <MdArrowForwardIos></MdArrowForwardIos>
         </span>
-        <Link to="/page" className="link">
+        <Link to="#" className="link">
           <span>{page}</span>
         </Link>
       </div>
